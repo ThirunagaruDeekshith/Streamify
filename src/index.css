@@ -1,13 +1,171 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Lato:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* background: linear-gradient(#29405a, #08363a); */
+  background-color: white;
+  color: #d9e2f1;
+  min-height: 100vh;
+}
+
+#main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-image:linear-gradient(to right,#29405a, #08363a);
+  
+}
+#main-header #title {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  /* margin: auto; */
+  
+}
+
+#main-header #title img {
+  width: 6rem;
+  height:6rem;
+  object-fit: contain;
+  border-radius: 50%;
+  border: 2px solid #04ff75;
+  justify-content: space-between;
+}
+#main-header button {
+  font-size: 1.5rem;
+  font-family: 'Lato', sans-serif;
+}
+
+h1 {
+  font-family:  Georgia, 'Times New Roman', Times, serif;
+  font-weight: 700;
+  font-size: 2rem;
+  margin: 0;
+  color: #bcff04;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+}
+
+.movies {
+  width: 90%;
+  max-width: 70rem;
+  list-style: none;
+  margin: 2rem auto;
+  padding: 7rem 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 1rem;
+}
+.movie {
+  background-color: #1d1a16;
+  border-radius: 1rem;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+}
+
+.movie article {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.movie img {
+  width: 100%;
+  height: 20rem;
+  object-fit: cover;
+}
+
+.movie h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0.75rem 0;
+}
+
+.movie-genre {
+  margin: 1rem;
+}
+.movie-rating {
+  display: inline-block;
+  background-color: #312c1d;
+  color: #ff9204;
+  font-size: 0.9rem;
+  font-weight: bold;
+  padding: 0.5rem 2rem;
+  margin: 0;
+  border-radius: 4px;
+}
+
+.movie-actions {
+  margin-bottom: 1.5rem;
+}
+
+
+.control {
+  margin: 0.5rem 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.control label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.control input {
+  width: 100%;
+  max-width: 20rem;
+  font: inherit;
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.control-row {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+
+.button {
+  font: inherit;
+  cursor: pointer;
+  background-color: #ff9204;
+  border: 1px solid #ff9204;
+  color: #1f1a09;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+}
+
+.button:hover,
+.button:active {
+  background-color: #ff9204;
+  border-color: #ff9204;
+  color: #1f1a09;
+}
+
+.text-button {
+  font: inherit;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  color: #ff9204;
+}
+
+.text-button:hover,
+.text-button:active {
+  color: #ff9204;
 }
